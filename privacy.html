@@ -33,7 +33,7 @@
   </p>
   <div class="note">
     <p>
-      3D Scanner does not request the <strong>INTERNET</strong> permission.
+      3D Scanner does not declare the <strong>INTERNET</strong> permission.
       Android will not allow it to open a network connection. There is no
       account, no server, no analytics and no advertising. Your scans cannot
       leave your device except as a file you deliberately share.
@@ -92,24 +92,43 @@
   </p>
 
   <h2>Permissions</h2>
+  <p>
+    These are the permissions the installed application declares, in full.
+  </p>
   <ul>
     <li>
-      <strong>Camera</strong> — the only permission the application requests. It
-      is required to see what you are scanning. Android will ask you for it, and
+      <strong>Camera</strong> — the only permission you are asked to grant. It
+      is required to see what you are scanning. Android will prompt for it, and
       you may withdraw it at any time in system settings, after which scanning
       will not function.
     </li>
     <li>
-      <strong>No internet permission.</strong> Not requested, not held.
+      <strong>View network connections</strong>
+      (<code>ACCESS_NETWORK_STATE</code>) — declared by Google's ARCore
+      component, which the application includes, and not by the application
+      itself. It permits checking <em>whether</em> a network exists. It does not
+      permit using one, and no code in this application reads it.
     </li>
     <li>
-      <strong>No location, contacts, microphone or phone permissions.</strong>
-      Not requested, not held.
+      <strong>An internal receiver permission</strong>
+      (<code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) — generated
+      automatically by the Android support libraries so that the application's
+      own components cannot be reached by other applications. It grants no
+      access to anything on your device.
+    </li>
+  </ul>
+  <p>These are <strong>not</strong> declared, and so cannot be used:</p>
+  <ul>
+    <li>
+      <strong>Internet.</strong> Without it, Android will not let the
+      application open a network connection at all. This is the permission that
+      makes every other statement in this policy enforceable rather than merely
+      promised.
     </li>
     <li>
-      <strong>No external storage permission.</strong> Scans are kept in the
-      application's own private directory. A file reaches your gallery or file
-      manager only when you export or share it yourself.
+      <strong>Location, contacts, microphone, phone, or external storage.</strong>
+      Scans are kept in the application's own private directory. A file reaches
+      your gallery or file manager only when you export or share it yourself.
     </li>
   </ul>
 
