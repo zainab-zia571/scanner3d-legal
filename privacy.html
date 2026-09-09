@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — 3D Scanner</title>
-<meta name="description" content="Privacy policy for the 3D Scanner Android application. All scans stay on the device; the app has no internet permission.">
+<meta name="description" content="Privacy policy for the 3D Scanner Android application. All scans stay on the device; nothing is uploaded.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 4 September 2026</p>
+  <p class="updated">Last updated 9 September 2026</p>
 
   <h2>Introduction</h2>
   <p>
@@ -33,12 +33,22 @@
   </p>
   <div class="note">
     <p>
-      3D Scanner does not declare the <strong>INTERNET</strong> permission.
-      Android will not allow it to open a network connection. There is no
-      account, no server, no analytics and no advertising. Your scans cannot
-      leave your device except as a file you deliberately share.
+      <strong>Your scans stay on your device.</strong> There is no account, no
+      server, no analytics and no advertising, and nothing you scan is uploaded
+      anywhere. A scan leaves the application only as a file you deliberately
+      share.
     </p>
   </div>
+  <p>
+    An earlier version of this policy said the application declared no
+    <strong>INTERNET</strong> permission. That has changed, and it is stated here
+    rather than quietly dropped. The application now declares it because Google
+    Play's billing library requires it, and Google Play requires that library
+    before a subscription can exist. <strong>The application itself opens no
+    network connection</strong> — it collects nothing, sends nothing and has
+    nothing to send to. If that changes, this policy will be updated before the
+    version that changes it is released.
+  </p>
   <p>
     By using the application you agree to this policy. If you do not agree,
     please do not use the application.
@@ -103,6 +113,17 @@
       will not function.
     </li>
     <li>
+      <strong>Internet</strong> (<code>INTERNET</code>) — required by Google
+      Play's billing library, which the application includes so that a
+      subscription can be offered in a future version. No code in this
+      application opens a connection, and nothing you scan is transmitted.
+    </li>
+    <li>
+      <strong>In-app billing</strong> (<code>com.android.vending.BILLING</code>)
+      — permits the application to ask Google Play about purchases. There is
+      nothing to purchase in this version.
+    </li>
+    <li>
       <strong>View network connections</strong>
       (<code>ACCESS_NETWORK_STATE</code>) — declared by Google's ARCore
       component, which the application includes, and not by the application
@@ -119,12 +140,6 @@
   </ul>
   <p>These are <strong>not</strong> declared, and so cannot be used:</p>
   <ul>
-    <li>
-      <strong>Internet.</strong> Without it, Android will not let the
-      application open a network connection at all. This is the permission that
-      makes every other statement in this policy enforceable rather than merely
-      promised.
-    </li>
     <li>
       <strong>Location, contacts, microphone, phone, or external storage.</strong>
       Scans are kept in the application's own private directory. A file reaches
@@ -185,7 +200,9 @@
     Data is held in application-private storage, which Android protects from
     other applications. The strongest protection here is structural rather than
     technical: data that is never transmitted cannot be intercepted in transit,
-    and data held on no server cannot be exposed by a breach of one.
+    and data held on no server cannot be exposed by a breach of one. That remains
+    true of this version — the application transmits nothing, whatever
+    permissions the libraries it includes may declare.
   </p>
   <p>
     What remains is the security of the device itself. A screen lock and full
