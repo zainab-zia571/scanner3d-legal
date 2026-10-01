@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — 3D Scanner</title>
-<meta name="description" content="Privacy policy for the 3D Scanner Android application. All scans stay on the device; nothing is uploaded.">
+<meta name="description" content="Privacy policy for the 3D Scanner Android application. Scans are processed on your device by default; cloud processing is optional, off unless you turn it on, and uploads are deleted within seven days.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,31 +23,31 @@
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 9 September 2026</p>
+  <p class="updated">Last updated 8 September 2026</p>
 
   <h2>Introduction</h2>
   <p>
     This policy explains what the 3D Scanner Android application
-    (<strong>com.scanner3d.app</strong>) does with information, and it is short
-    for a simple reason: the application does not send anything anywhere.
+    (<strong>com.scanner3d.app</strong>) does with information. The short
+    version is that scanning, reconstruction and storage all happen on your
+    device, and nothing is sent anywhere unless you ask for it.
   </p>
   <div class="note">
     <p>
-      <strong>Your scans stay on your device.</strong> There is no account, no
-      server, no analytics and no advertising, and nothing you scan is uploaded
-      anywhere. A scan leaves the application only as a file you deliberately
-      share.
+      <strong>Cloud processing is optional and off until you turn it on.</strong>
+      There is no account and nothing to sign in to. If you never enable it,
+      nothing you scan leaves your phone except as a file you deliberately
+      share, and the sections below about uploading do not describe anything
+      that has happened to you.
     </p>
   </div>
   <p>
-    An earlier version of this policy said the application declared no
-    <strong>INTERNET</strong> permission. That has changed, and it is stated here
-    rather than quietly dropped. The application now declares it because Google
-    Play's billing library requires it, and Google Play requires that library
-    before a subscription can exist. <strong>The application itself opens no
-    network connection</strong> — it collects nothing, sends nothing and has
-    nothing to send to. If that changes, this policy will be updated before the
-    version that changes it is released.
+    An earlier version of this application declared no <strong>INTERNET</strong>
+    permission at all, and this policy said so. That is no longer true, and it is
+    stated plainly here rather than quietly dropped: the application now declares
+    it, because cloud processing needs it. What has not changed is that the
+    default is local, the choice is yours, and the application asks before the
+    first upload.
   </p>
   <p>
     By using the application you agree to this policy. If you do not agree,
@@ -56,14 +56,21 @@
 
   <h2>Information We Collect</h2>
   <p>
-    <strong>We collect nothing.</strong> The developer receives no data from the
-    application — no personal information, no usage statistics, no crash
-    reports, no device identifiers and no contact details. Nothing is
-    transmitted, so there is nothing for us to receive or store.
+    <strong>With cloud processing off, we collect nothing.</strong> No personal
+    information, no usage statistics, no crash reports, no advertising
+    identifiers, no contact details. Nothing is transmitted, so there is nothing
+    to receive or store.
   </p>
   <p>
-    The application does create and hold data <em>on your device</em>, described
-    below. That data is yours; it is not sent to us.
+    <strong>With cloud processing on, we receive the scan you chose to send</strong>
+    and nothing else about you. That means the photographs, depth images and
+    camera positions of that scan, and an anonymous identifier described below.
+    We do not receive your name, your email address, your location, your contacts
+    or any identifier issued by Android or by Google.
+  </p>
+  <p>
+    The application also creates and holds data <em>on your device</em>,
+    described below. That data is yours.
   </p>
 
   <h2>Scan Data</h2>
@@ -92,6 +99,67 @@
     Earth you were.
   </p>
 
+  <h2>Cloud Processing</h2>
+  <p>
+    Reconstruction is demanding, and a phone is slower at it than a rented
+    graphics card. You may choose, in <em>Settings &rarr; Processing</em>, to
+    have a scan reconstructed on a remote machine instead. The application asks
+    you to agree the first time, and shows you what this section says before it
+    sends anything.
+  </p>
+  <p><strong>What is uploaded.</strong> For the scan you chose, and only that scan:</p>
+  <ul>
+    <li>its depth images, as measured, and the camera position for each;</li>
+    <li>its photographs, resized to a limit that depends on the quality you pick;</li>
+    <li>
+      a short description of the scan — which kind it is, how it was captured,
+      and whether it has a known real-world scale;
+    </li>
+    <li>
+      an <strong>anonymous install identifier</strong>: a random value the
+      application generates on your device the first time you enable cloud
+      processing. It exists to keep one installation from consuming another's
+      allowance. It is not derived from your phone, your account or anything
+      about you, it is not shared with anyone else, and turning cloud processing
+      off deletes it.
+    </li>
+    <li>
+      <strong>a subscription identifier</strong>, if you subscribe: a separate
+      value that identifies your purchase to RevenueCat, so that the service can
+      confirm you are entitled to what you are asking for. It is kept apart from
+      the install identifier above and outlives it, deliberately — if turning
+      cloud processing off deleted it, it would also lose track of a subscription
+      you are still paying for. It is not your name, your email address or your
+      Google account, and we never receive those.
+    </li>
+  </ul>
+  <p>
+    Photographs of a room contain whatever was in the room. Consider that before
+    sending a scan, exactly as you would before sharing one.
+  </p>
+  <p><strong>What is not uploaded.</strong> Scans you did not choose to send.
+  Measurements, project names, or anything else held on the device. Any
+  identifier that could link the job to you personally.</p>
+  <p>
+    <strong>How long it is kept.</strong> Uploads and the results made from them
+    are deleted <strong>within seven days</strong>, automatically, by a retention
+    rule on the storage itself rather than by anyone remembering to run it. They
+    are not used to train anything, are not analysed, and are not shared. Your
+    own copy on your phone is unaffected and stays until you delete it.
+  </p>
+  <p>
+    <strong>Where it goes.</strong> To storage and compute rented from the
+    providers named under <a href="#third-party">Third Party Services</a>, over
+    an encrypted connection. Reconstruction runs there and the result comes back
+    to your phone.
+  </p>
+  <p>
+    <strong>Turning it off.</strong> Setting processing back to
+    <em>On this device</em> stops any further upload immediately and deletes the
+    install identifier. Anything already uploaded is deleted by the retention
+    rule; if you would like it removed sooner, <a href="contact.html">ask us</a>.
+  </p>
+
   <h2>Device Information</h2>
   <p>
     The application checks what your device is capable of so that it can offer
@@ -103,7 +171,9 @@
 
   <h2>Permissions</h2>
   <p>
-    These are the permissions the installed application declares, in full.
+    These are the permissions the installed application declares, in full. The
+    list is taken from the built application file rather than from memory, and
+    it is checked against it before each release.
   </p>
   <ul>
     <li>
@@ -113,22 +183,43 @@
       will not function.
     </li>
     <li>
-      <strong>Internet</strong> (<code>INTERNET</code>) — required by Google
-      Play's billing library, which the application includes so that a
-      subscription can be offered in a future version. No code in this
-      application opens a connection, and nothing you scan is transmitted.
-    </li>
-    <li>
-      <strong>In-app billing</strong> (<code>com.android.vending.BILLING</code>)
-      — permits the application to ask Google Play about purchases. There is
-      nothing to purchase in this version.
+      <strong>Internet</strong> (<code>INTERNET</code>) — required to upload a
+      scan for cloud processing and to fetch the result. It is used for nothing
+      else: no analytics, no advertising, no crash reporting, no checking in.
+      With cloud processing off, the application opens no connection at all.
     </li>
     <li>
       <strong>View network connections</strong>
-      (<code>ACCESS_NETWORK_STATE</code>) — declared by Google's ARCore
-      component, which the application includes, and not by the application
-      itself. It permits checking <em>whether</em> a network exists. It does not
-      permit using one, and no code in this application reads it.
+      (<code>ACCESS_NETWORK_STATE</code>) — used to check that a usable network
+      exists before starting an upload, so a large transfer is not begun on a
+      connection that cannot finish it, and to tell you when you are about to
+      send over mobile data. It reveals whether you are connected, not what you
+      do while connected.
+    </li>
+    <li>
+      <strong>In-app billing</strong> (<code>com.android.vending.BILLING</code>)
+      — lets the application ask Google Play to sell a subscription and to say
+      whether you hold one. It is Google Play that takes the payment and Google
+      Play that holds the card; this application never sees a card number, and
+      declaring this permission gives it no access to your Google account.
+    </li>
+    <li>
+      <strong>Foreground service</strong> (<code>FOREGROUND_SERVICE</code>) and
+      <strong>foreground service, data sync</strong>
+      (<code>FOREGROUND_SERVICE_DATA_SYNC</code>) — building a three-dimensional
+      model from a scan takes minutes of continuous work. These allow that work
+      to carry on while the application is not on screen, instead of Android
+      stopping it and losing what had been done. Nothing is synchronised with
+      anywhere: “data sync” is simply the category Android provides for work
+      that has to finish, and there is no category named “finish building a
+      model”.
+    </li>
+    <li>
+      <strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>) — to show
+      you what is being built while it happens, which Android requires of any
+      application doing work in the background. You may refuse it; the work
+      still runs, and you simply do not see the notice. It is never used to
+      advertise anything to you.
     </li>
     <li>
       <strong>An internal receiver permission</strong>
@@ -145,6 +236,11 @@
       Scans are kept in the application's own private directory. A file reaches
       your gallery or file manager only when you export or share it yourself.
     </li>
+    <li>
+      <strong>Accounts, or any device identifier.</strong> The application cannot
+      read who you are signed in as, and does not ask Android for an advertising
+      identifier or a device serial.
+    </li>
   </ul>
 
   <h2>Data Storage</h2>
@@ -156,17 +252,21 @@
   <p>
     Deleting a scan in the application removes its files and its database entry
     from the device. Uninstalling the application removes everything it created.
-    Because none of it was ever copied elsewhere, that is the end of it — there
-    is no remote copy for us to delete on your behalf, and no request for us to
-    action.
+  </p>
+  <p>
+    If a scan was sent for cloud processing, a copy exists off your device until
+    the seven-day retention rule removes it. Deleting the scan on your phone does
+    not shorten that, and the rule runs whether or not you delete anything. To
+    have a copy removed sooner, <a href="contact.html">ask us</a> — you will need
+    to say which scan, which the application can tell you.
   </p>
 
   <h2>Export and Sharing</h2>
   <p>
     The application can write a model to a file in a number of standard formats,
     and hand that file to another application you choose — a messaging app, a
-    cloud drive, an email client. <strong>This is the only way data leaves the
-    application, and it happens only when you ask for it.</strong>
+    cloud drive, an email client. <strong>This and cloud processing are the only
+    ways data leaves the application, and both happen only when you ask.</strong>
   </p>
   <p>
     Once you have shared a file, it is governed by whatever terms apply to the
@@ -174,11 +274,13 @@
     a scan shows before sending it.
   </p>
   <p>
-    The application provides no cloud backup and no synchronisation. If you want
-    a copy of a scan kept elsewhere, exporting it is how you make one.
+    The application provides no cloud backup and no synchronisation. Cloud
+    processing is not storage: what is uploaded is deleted within seven days, and
+    nothing there is a copy you can come back for. If you want a scan kept
+    elsewhere, exporting it is how you make one.
   </p>
 
-  <h2>Third Party Services</h2>
+  <h2 id="third-party">Third Party Services</h2>
   <p>
     The application uses <strong>Google Play Services for AR (ARCore)</strong>,
     a Google component installed on your device, for motion tracking and depth
@@ -191,18 +293,56 @@
     <li><a href="https://developers.google.com/ar/data-privacy">developers.google.com/ar/data-privacy</a></li>
   </ul>
   <p>
-    Beyond ARCore, the application integrates no third-party service: no
-    analytics, no advertising network, no crash reporting, no social sign-in.
+    <strong>If you use cloud processing</strong>, these providers handle your
+    scan on our behalf. They process it to perform the reconstruction and for
+    nothing else.
+  </p>
+  <ul>
+    <li>
+      <strong>Cloudflare</strong> — stores the uploaded scan and the result, and
+      runs the service that hands work out. The seven-day deletion is a rule on
+      that storage.
+      <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>
+    </li>
+    <li>
+      <strong>RunPod</strong> — provides the graphics hardware the reconstruction
+      runs on. <a href="https://www.runpod.io/legal/privacy-policy">runpod.io/legal/privacy-policy</a>
+    </li>
+    <li>
+      <strong>RevenueCat</strong> — manages the subscription and tells us whether
+      one is active. It is given an app user identifier, which the application
+      generates and which is not your name, your email address or your Google
+      account, together with the purchase the store reports. It is what the
+      service asks before it accepts a cloud job, so that the answer does not
+      depend on your phone, which could be made to say anything.
+      <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>
+    </li>
+    <li>
+      <strong>Google Play Billing</strong> — takes the payment. Google never
+      passes us your card details, and we never ask Google who you are.
+      <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+    </li>
+  </ul>
+  <p>
+    Beyond these and ARCore, the application integrates no third-party service:
+    no analytics, no advertising network, no crash reporting, no social sign-in.
   </p>
 
   <h2>Security</h2>
   <p>
     Data is held in application-private storage, which Android protects from
-    other applications. The strongest protection here is structural rather than
-    technical: data that is never transmitted cannot be intercepted in transit,
-    and data held on no server cannot be exposed by a breach of one. That remains
-    true of this version — the application transmits nothing, whatever
-    permissions the libraries it includes may declare.
+    other applications. With cloud processing off, the strongest protection is
+    structural rather than technical: data that is never transmitted cannot be
+    intercepted, and data held on no server cannot be exposed by a breach of one.
+  </p>
+  <p>
+    With cloud processing on, that structural protection is partly given up, and
+    saying otherwise would be dishonest. What replaces it: the upload travels
+    over an encrypted connection; it is held in private storage that is not
+    listable or guessable and is reachable only through links that expire; and it
+    is deleted within seven days. The keys to that storage are held by the
+    service, never inside the application, so a copy of the app cannot be taken
+    apart to reach anybody's data.
   </p>
   <p>
     What remains is the security of the device itself. A screen lock and full
@@ -223,7 +363,13 @@
     <li><strong>Deletion</strong> — delete a scan, or uninstall the application.</li>
     <li>
       <strong>Withdrawing consent</strong> — revoke the camera permission in
-      Android settings.
+      Android settings, and set processing back to <em>On this device</em> to
+      stop any further upload and delete the install identifier.
+    </li>
+    <li>
+      <strong>Erasure of an upload</strong> — uploads are deleted within seven
+      days regardless. To have one removed sooner,
+      <a href="contact.html">ask us</a>.
     </li>
   </ul>
   <p>
@@ -234,11 +380,12 @@
   <h2>Children's Privacy</h2>
   <p>
     The application is not directed at children under 13, and we do not
-    knowingly collect information from anyone — child or adult — because we
-    collect nothing at all. Parents should be aware that scanning captures
-    camera images of whatever is in view, and that those images stay on the
-    device where they can be viewed and shared. We would encourage supervision
-    on that basis rather than because of any data we hold.
+    knowingly collect personal information from anyone, child or adult. Parents
+    should be aware that scanning captures camera images of whatever is in view;
+    that those images stay on the device unless cloud processing is deliberately
+    turned on; and that cloud processing requires a paid subscription, which a
+    child should not be arranging unsupervised. We would encourage supervision on
+    that basis.
   </p>
 
   <h2>Changes to This Policy</h2>
