@@ -17,7 +17,6 @@
       <a href="privacy.html" aria-current="page">Privacy</a>
       <a href="terms.html">Terms</a>
       <a href="contact.html">Contact</a>
-      <a href="delete-data.html">Delete my data</a>
     </nav>
   </div>
 </header>
@@ -55,12 +54,32 @@
     please do not use the application.
   </p>
 
+  <h2>What Changed, and When</h2>
+  <p>
+    Until 6 October 2026 this application collected nothing whatsoever. It
+    declared no internet permission, which meant the promise was kept by
+    Android rather than by our word for it. That is no longer true, and this
+    section exists so that the change is stated rather than discovered.
+  </p>
+  <p>
+    The application now reports <strong>crashes</strong> and a small number of
+    <strong>usage events</strong> to Google Firebase. The reason is narrow: a
+    reconstruction that fails on a phone we do not own was previously a
+    one-star review saying &ldquo;crashes&rdquo; and nothing more. A stack
+    trace makes it a fixable defect.
+  </p>
+  <p>
+    What did <em>not</em> change: your scans are still yours, still stored on
+    your device, and still never uploaded unless you turn on cloud processing
+    and agree to it.
+  </p>
+
   <h2>Information We Collect</h2>
   <p>
-    <strong>With cloud processing off, we collect nothing.</strong> No personal
-    information, no usage statistics, no crash reports, no advertising
-    identifiers, no contact details. Nothing is transmitted, so there is nothing
-    to receive or store.
+    <strong>With cloud processing off, we receive crash reports and the usage
+    events listed below, and nothing else.</strong> No personal information, no
+    advertising identifier, no contact details, and nothing you have scanned,
+    measured, photographed or written. Your scans stay on your device.
   </p>
   <p>
     <strong>With cloud processing on, we receive the scan you chose to send</strong>
@@ -223,6 +242,15 @@
       advertise anything to you.
     </li>
     <li>
+      <strong>Prevent sleeping</strong> (<code>WAKE_LOCK</code>) and
+      <strong>Google Play install referrer</strong>
+      (<code>BIND_GET_INSTALL_REFERRER_SERVICE</code>) &mdash; both added by
+      Google's analytics library rather than by this application. The first
+      lets it finish sending a report before the device sleeps; the second lets
+      Google Play tell it which listing an install came from. Neither is read
+      by any code written for this application.
+    </li>
+    <li>
       <strong>An internal receiver permission</strong>
       (<code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>) — generated
       automatically by the Android support libraries so that the application's
@@ -243,6 +271,69 @@
       identifier or a device serial.
     </li>
   </ul>
+
+  <h2>Crash Reports and Usage Events</h2>
+  <p>
+    Both are handled by Google Firebase, acting as our processor.
+  </p>
+
+  <h3>Crash reports</h3>
+  <p>
+    When the application crashes, Firebase Crashlytics records what the program
+    was doing at that moment: the stack trace, your device model, your Android
+    version, and four facts about the build &mdash; which build type, which
+    version, what scanning the device supports, and whether processing is set
+    to local or cloud.
+  </p>
+  <p>
+    A crash report never contains anything you scanned, photographed, typed or
+    named. Not a scan, not a photograph, not a measurement, not a file name,
+    not a project name, not a note. A crash in the geometry code is reported as
+    a crash in the geometry code, not as the shape of your living room.
+  </p>
+
+  <h3>Usage events</h3>
+  <p>
+    Firebase Analytics records that certain things happened, so we can tell
+    which parts of the application people reach and where they stop. The
+    complete list is:
+  </p>
+  <ul>
+    <li><code>app_opened</code> &mdash; the application started.</li>
+    <li><code>onboarding_started</code>, <code>onboarding_completed</code>
+        &mdash; the introduction was shown, and finished.</li>
+    <li><code>paywall_shown</code> &mdash; the cloud processing offer was
+        displayed.</li>
+    <li><code>purchase_started</code>, <code>purchase_completed</code> &mdash;
+        a subscription was begun, and confirmed by the store. The only detail
+        attached is which package, such as &ldquo;weekly&rdquo;.</li>
+    <li><code>restore_purchases</code> &mdash; the restore button was
+        pressed.</li>
+    <li><code>subscription_state_changed</code> &mdash; an entitlement became
+        active or inactive.</li>
+    <li><code>review_request_triggered</code>, <code>rate_app_clicked</code>
+        &mdash; the application asked Google Play to consider showing a review
+        prompt, or you tapped Rate the App.</li>
+  </ul>
+  <p>
+    That is the entire list. Every value sent with an event comes from a fixed
+    vocabulary written into the application's source; nothing that varies with
+    what you scanned, measured or typed can be attached to one. No event
+    records a scan, a model, a measurement, a file, a name or a note.
+  </p>
+  <p>
+    <strong>No advertising identifier.</strong> Firebase normally collects one.
+    This application removes that permission from the build and switches the
+    collection off, because it carries no advertising, uses no ad network and
+    measures no campaign. There is nothing here for an advertising identifier
+    to be for.
+  </p>
+  <p>
+    Firebase assigns its own installation identifier so that two crashes can be
+    recognised as coming from the same device. It is not your name, your email
+    address or your Google account, it is not shared with anyone, and
+    uninstalling the application ends it.
+  </p>
 
   <h2>Data Storage</h2>
   <p>
