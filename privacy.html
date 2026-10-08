@@ -23,7 +23,7 @@
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 8 September 2026</p>
+  <p class="updated">Last updated 8 October 2026</p>
 
   <h2>Introduction</h2>
   <p>
@@ -203,10 +203,11 @@
       will not function.
     </li>
     <li>
-      <strong>Internet</strong> (<code>INTERNET</code>) — required to upload a
-      scan for cloud processing and to fetch the result. It is used for nothing
-      else: no analytics, no advertising, no crash reporting, no checking in.
-      With cloud processing off, the application opens no connection at all.
+      <strong>Internet</strong> (<code>INTERNET</code>) — required to
+      upload a scan for cloud processing and fetch the result, to verify a
+      subscription, and to send the crash reports and usage events described
+      above. It is used for nothing else: no advertising, and no transmission
+      of a scan unless you have turned cloud processing on.
     </li>
     <li>
       <strong>View network connections</strong>
@@ -416,8 +417,23 @@
     </li>
   </ul>
   <p>
+    <strong>Regardless of cloud processing</strong>, one further provider is
+    used from every installation:
+  </p>
+  <ul>
+    <li>
+      <strong>Google Firebase</strong> — receives the crash reports and
+      usage events described above, under
+      <strong>Analytics and Crash Reporting</strong>. Advertising identifier
+      collection is switched off and the permission that would allow it is
+      removed from the application, so Firebase cannot tie this data to an
+      advertising profile.
+      <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>
+    </li>
+  </ul>
+  <p>
     Beyond these and ARCore, the application integrates no third-party service:
-    no analytics, no advertising network, no crash reporting, no social sign-in.
+    no advertising network, no social sign-in, no data broker.
   </p>
 
   <h2>Security</h2>
